@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Wave Effect</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #f06, #4a90e2);
+            overflow: hidden;
+        }
+
+        .css-live-wrap {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        svg {
+            width: 430px;
+            height: 116px;
+            border-radius: 0 0 0 50px;
+        }
+
+        .percentage-pie {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="css-live-wrap">
+        <hgroup class="percentage-pie">
+            <svg viewBox="0 0 430 116" xmlns="http://www.w3.org/2000/svg">
+                <!-- First Wave -->
+                <g id="wave1">
+                    <path id="wave-1" fill="#303AC9" d="M 215 0 C 215 58 215 58 215 116 L 0 116 L 0 0 Z">
+                        <animate dur="5s" repeatCount="indefinite" attributeName="d" attributeType="XML" values="M 215 0 C 107.5 0 322.5 116 215 116 L 0 116 L 0 0 Z;
+                                                        M 215 0 C 215 58 215 58 215 116 L 0 116 L 0 0 Z;
+                                                        M 215 0 C 107.5 0 322.5 116 215 116 L 0 116 L 0 0 Z"></animate>
+                    </path>
+					
+                </g>
+                <!-- Second Wave -->
+                <g id="wave2">
+                    <path id="wave-2" fill="#828AFC" d="M 215 0 C 215 58 215 58 215 116 L 0 116 L 0 0 Z">
+                        <animate dur="5s" repeatCount="indefinite" attributeName="d" attributeType="XML" values="M 215 0 C 322.5 0 107.5 116 215 116 L 0 116 L 0 0 Z;
+                                                        M 215 0 C 215 58 215 58 215 116 L 0 116 L 0 0 Z;
+                                                        M 215 0 C 322.5 0 107.5 116 215 116 L 0 116 L 0 0 Z"></animate>
+                    </path>
+                </g>
+            </svg>
+        </hgroup>
+    </div>
+</body>
+</html>

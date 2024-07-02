@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Effect</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f06, #4a90e2);
+            overflow: hidden;
+        }
+
+        .css-live-wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        svg {
+            width: 430px;
+            height: 116px;
+            border-radius: 0 0 50px 50px;
+        }
+
+        .percentage-pie {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="css-live-wrap">
+        <hgroup class="percentage-pie">
+            <svg viewBox="0 0 430 116" xmlns="http://www.w3.org/2000/svg">
+                <!-- First Wave -->
+                <g id="wave1">
+                    <path id="wave-1" fill="#303AC9" d="M 0 58 C 107.5 58 107.5 58 215 58 C 322.5 58 322.5 58 430 58 L 430 116 L 0 116 Z">
+                        <animate dur="5s" repeatCount="indefinite" attributeName="d" attributeType="XML" values="M 0 58 C 107.5 0 107.5 116 215 58 C 322.5 0 322.5 116 430 58 L 430 116 L 0 116 Z;
+                                                        M 0 58 C 107.5 58 107.5 58 215 58 C 322.5 58 322.5 58 430 58 L 430 116 L 0 116 Z;
+                                                        M 0 58 C 107.5 0 107.5 116 215 58 C 322.5 0 322.5 116 430 58 L 430 116 L 0 116 Z"></animate>
+                    </path>
+                </g>
+                <!-- Second Wave -->
+                <g id="wave2">
+                    <path id="wave-2" fill="#828AFC" d="M 0 58 C 107.5 58 107.5 58 215 58 C 322.5 58 322.5 58 430 58 L 430 116 L 0 116 Z">
+                        <animate dur="5s" repeatCount="indefinite" attributeName="d" attributeType="XML" values="M 0 58 C 107.5 116 107.5 0 215 58 C 322.5 116 322.5 0 430 58 L 430 116 L 0 116 Z;
+                                                        M 0 58 C 107.5 58 107.5 58 215 58 C 322.5 58 322.5 58 430 58 L 430 116 L 0 116 Z;
+                                                        M 0 58 C 107.5 116 107.5 0 215 58 C 322.5 116 322.5 0 430 58 L 430 116 L 0 116 Z"></animate>
+                    </path>
+                </g>
+            </svg>
+        </hgroup>
+    </div>
+</body>
+</html>

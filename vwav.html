@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move_wave {
+            0% {
+                transform: translateX(0) translateZ(0) scaleY(1)
+            }
+
+            50% {
+                transform: translateX(-25%) translateZ(0) scaleY(0.55)
+            }
+
+            100% {
+                transform: translateX(-50%) translateZ(0) scaleY(1)
+            }
+        }
+
+        .wave {
+            background-color: #dd1717;
+            width: 100%;
+            height: 285px;
+        }
+
+        .top {
+            background: url('./icons/wav1.png') no-repeat;
+            background-size: 100%;
+        }
+
+        .bottom {
+            background: url('./icons/wav2.png') no-repeat;
+            background-size: 100%;
+        }
+
+        .waveAnimation .waveTop {
+            animation: move-wave 3s;
+            -webkit-animation: move-wave 3s;
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+
+        .waveMiddle {
+            background-size: 50% 120px;
+        }
+
+        .waveAnimation .waveMiddle {
+            animation: move_wave 10s linear infinite;
+        }
+
+        .waveBottom {
+            background-size: 50% 100px;
+        }
+
+        .waveAnimation .waveBottom {
+            animation: move_wave 15s linear infinite;
+        }
+
+        .wave-text {
+            position: relative;
+            overflow: hidden;
+            /* 确保超出部分不显示 */
+        }
+
+        .wave-text::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: blue;
+            /* 波浪线的颜色 */
+            animation: wave 2s infinite;
+            /* 波浪线的动画 */
+        }
+
+        @keyframes wave {
+            0% {
+                left: 0;
+                transform: scaleX(0.3);
+            }
+
+            100% {
+                left: 100%;
+                transform: scaleX(1);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wave">
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+    <div class="wave-text">我是带波浪线的文本</div>
+</body>
+
+</html>
